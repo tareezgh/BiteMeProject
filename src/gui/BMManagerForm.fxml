@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BMManagerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="67.0" layoutX="88.0" layoutY="35.0" stroke="#b5b5b5" strokeType="INSIDE" width="425.0" />
+      <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="24.0" layoutY="24.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="156.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager page">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fontSmoothingType="LCD" layoutX="430.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account status: " wrappingWidth="99.2294921875" />
+      <Label fx:id="lblStatus" layoutX="520.0" layoutY="11.0" prefHeight="17.0" prefWidth="70.0" />
+      <Label fx:id="lblWelcome" layoutX="19.0" layoutY="120.0" text="Welcome, UserName.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text layoutX="210.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to do ?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnViewLogs" layoutX="96.0" layoutY="180.0" mnemonicParsing="false" onAction="#getViewLogsBtn" prefHeight="67.0" prefWidth="174.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-border-radius: 5em; -fx-cursor: hand;" text="View logs">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnManageData" layoutX="339.0" layoutY="180.0" mnemonicParsing="false" onAction="#getManageDataBtn" prefHeight="67.0" prefWidth="182.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-border-radius: 5em; -fx-cursor: hand;" text="Manage data">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnApprove" layoutX="96.0" layoutY="264.0" mnemonicParsing="false" onAction="#getApproveBtn" prefHeight="67.0" prefWidth="174.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-border-radius: 5em; -fx-cursor: hand;" text="Approve employee">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegister" layoutX="344.0" layoutY="264.0" mnemonicParsing="false" onAction="#getRegisterBtn" prefHeight="67.0" prefWidth="182.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-border-radius: 5em; -fx-cursor: hand;" text="Registration">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="19.0" layoutY="289.0" onMouseClicked="#getLogoutBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_logout.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RestaurantCreateMenuFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" layoutX="71.0" layoutY="21.0" stroke="#b5b5b5" strokeType="INSIDE" width="385.0" />
+      <ImageView fitHeight="73.0" fitWidth="82.0" layoutX="24.0" layoutY="14.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="24.0" prefHeight="53.0" prefWidth="239.0" text="Add meals">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Text layoutX="105.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmpCategory" layoutX="263.0" layoutY="109.0" onAction="#getSelectedCategory" prefHeight="27.0" prefWidth="184.0" promptText="Choose" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Label layoutX="48.0" layoutY="172.0" prefHeight="24.0" prefWidth="109.0" text="Meal name*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMealName" layoutX="235.0" layoutY="171.0" prefHeight="27.0" prefWidth="192.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="48.0" layoutY="217.0" text="Price for big meal*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceBig" layoutX="237.0" layoutY="215.0" prefHeight="27.0" prefWidth="192.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="46.0" layoutY="265.0" text="Price for medium meal*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceMedium" layoutX="237.0" layoutY="263.0" prefHeight="27.0" prefWidth="192.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="48.0" layoutY="310.0" text="Price for small meal*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceSmall" layoutX="237.0" layoutY="308.0" prefHeight="27.0" prefWidth="192.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <ImageView fx:id="imgAdd" fitHeight="44.0" fitWidth="44.0" layoutX="196.0" layoutY="350.0" onMouseClicked="#clickedAddOrderMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_add.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="256.0" layoutY="359.0" prefHeight="27.0" prefWidth="82.0" text="Add meal">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMessage" layoutX="12.0" layoutY="401.0" prefHeight="17.0" prefWidth="329.0" />
+      <ImageView fitHeight="56.0" fitWidth="54.0" layoutX="465.0" layoutY="360.0" onMouseClicked="#getDoneBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_done.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="465.0" layoutY="355.0" onMouseClicked="#getDoneBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+   </children>
+</AnchorPane>

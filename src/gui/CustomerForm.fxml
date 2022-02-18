@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CustomerFormController">
+   <children>
+      <Rectangle fx:id="CreateNewOrderShape" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="148.0" layoutX="137.0" layoutY="163.0" onMouseClicked="#clickedCreateNewOrderMouse" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="122.0" />
+      <Rectangle fx:id="ViewExsistingOrderShape" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="148.0" layoutX="340.0" layoutY="163.0" onMouseClicked="#clickedViewExsistingOrderMouse" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="132.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="85.0" layoutY="35.0" stroke="#b5b5b5" strokeType="INSIDE" width="431.0" />
+      <ImageView fitHeight="79.0" fitWidth="84.0" layoutX="22.0" layoutY="24.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="144.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer page" wrappingWidth="329.65625">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblWelcome" layoutX="22.0" layoutY="112.0" prefHeight="19.0" prefWidth="154.0" text="Welcome, UserName.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text fontSmoothingType="LCD" layoutX="401.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account status: " wrappingWidth="99.2294921875" />
+      <Label fx:id="lblStatus" layoutX="491.0" layoutY="3.0" prefHeight="17.0" prefWidth="70.0" />
+      <Text layoutX="209.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to do ?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="CreateNewOrderImage" fitHeight="129.0" fitWidth="132.0" layoutX="134.0" layoutY="176.0" onMouseClicked="#clickedCreateNewOrderMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_createOrder.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ViewExsistingOrderImage" fitHeight="122.0" fitWidth="122.0" layoutX="349.0" layoutY="176.0" onMouseClicked="#clickedViewExsistingOrderMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_ViewOrder.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="CreateNewOrder" layoutX="137.0" layoutY="316.0" mnemonicParsing="false" onAction="#clickedCreateNewOrder" prefHeight="27.0" prefWidth="122.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" text="Create new order" />
+      <Button fx:id="ViewExsistingOrder" layoutX="340.0" layoutY="316.0" mnemonicParsing="false" onAction="#clickedViewExsistingOrder" prefHeight="27.0" prefWidth="140.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" text="View existing orders" />
+      <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="22.0" layoutY="288.0" onMouseClicked="#getLogoutBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_logout.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

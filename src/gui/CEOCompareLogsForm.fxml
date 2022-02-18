@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CEOCompareLogsFormController">
+	<children>
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="96.0" layoutY="22.0" stroke="#b5b5b5" strokeType="INSIDE" width="622.0" />
+		<ListView layoutX="374.0" layoutY="97.0" prefHeight="338.0" prefWidth="344.0" style="-fx-background-color: grey;" />
+		<ListView layoutX="22.0" layoutY="97.0" prefHeight="338.0" prefWidth="337.0" style="-fx-background-color: grey;" />
+		<ImageView fitHeight="73.0" fitWidth="82.0" layoutX="37.0" layoutY="14.0">
+			<image>
+				<Image url="@img_LogoBiteme.png" />
+			</image>
+		</ImageView>
+		<Label layoutX="152.0" layoutY="34.0" prefHeight="35.0" prefWidth="515.0" text="Please fill in details to compare income logs :">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<Label layoutX="92.0" layoutY="112.0" prefHeight="27.0" prefWidth="395.0">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="34.0" layoutY="110.0" prefHeight="27.0" prefWidth="163.0" text="Choose restaurant:">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cmpRestaurants" layoutX="154.0" layoutY="110.0" onAction="#getSelectedRestaurantMethodLog1" prefHeight="27.0" prefWidth="154.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+		<Label layoutX="34.0" layoutY="151.0" prefHeight="27.0" prefWidth="163.0" text="Choose the month:">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cmpMonth" layoutX="175.0" layoutY="151.0" onAction="#getSelectedMonthMethodLog1" prefHeight="27.0" prefWidth="111.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+		<Label fx:id="lblBranchPrompt" layoutX="38.0" layoutY="196.0" prefHeight="27.0" prefWidth="207.0" text="Showing data of branch:">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label layoutX="78.0" layoutY="452.0" prefHeight="27.0" prefWidth="163.0" text="Total income for that month:" textAlignment="CENTER" />
+		<TextField fx:id="txtTotalPrice" layoutX="246.0" layoutY="452.0" prefHeight="27.0" prefWidth="99.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+		<Label fx:id="lblRestaurantName" layoutX="244.0" layoutY="200.0" prefHeight="21.0" prefWidth="91.0" />
+		<Label layoutX="397.0" layoutY="110.0" prefHeight="27.0" prefWidth="163.0" text="Choose restaurant:">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cmpRestaurants1" layoutX="517.0" layoutY="110.0" onAction="#getSelectedRestaurantMethodLog2" prefHeight="27.0" prefWidth="154.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+		<Label layoutX="397.0" layoutY="151.0" prefHeight="27.0" prefWidth="163.0" text="Choose the month:">
+			<font>
+				<Font size="13.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="cmpMonth1" layoutX="538.0" layoutY="151.0" onAction="#getSelectedMonthMethodLog2" prefHeight="27.0" prefWidth="111.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+		<Label fx:id="lblBranchPrompt1" layoutX="393.0" layoutY="197.0" prefHeight="27.0" prefWidth="207.0" text="Showing data of branch:">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<Label fx:id="lblRestaurantName1" layoutX="603.0" layoutY="200.0" prefHeight="21.0" prefWidth="91.0" />
+		<Label layoutX="426.0" layoutY="452.0" prefHeight="27.0" prefWidth="163.0" text="Total income for that month:" textAlignment="CENTER" />
+		<TextField fx:id="txtTotalPrice1" layoutX="594.0" layoutY="452.0" prefHeight="27.0" prefWidth="99.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+		<ImageView fitHeight="41.0" fitWidth="40.0" layoutX="14.0" layoutY="449.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+			<image>
+				<Image url="@img_back.png" />
+			</image>
+		</ImageView>
+		<TableView fx:id="tblLogs" layoutX="34.0" layoutY="235.0" prefHeight="187.0" prefWidth="311.0">
+			<columns>
+				<TableColumn fx:id="orderColumn" prefWidth="59.333316802978516" text="OrderID" />
+				<TableColumn fx:id="customerColumn" prefWidth="74.0000228881836" text="CustomerID" />
+				<TableColumn fx:id="dateColumn" prefWidth="77.33331298828125" text="Deal Date" />
+				<TableColumn fx:id="priceColumn" prefWidth="98.66669209798175" text="Deal Income" />
+			</columns>
+		</TableView>
+		<TableView fx:id="tblLogs1" layoutX="385.0" layoutY="235.0" prefHeight="187.0" prefWidth="321.0">
+			<columns>
+				<TableColumn fx:id="orderColumn1" prefWidth="66.66668701171875" text="OrderID" />
+				<TableColumn fx:id="customerColumn1" prefWidth="74.66668701171875" text="CustomerID" />
+				<TableColumn fx:id="dateColumn1" prefWidth="85.99993896484375" text="Deal Date" />
+				<TableColumn fx:id="priceColumn1" prefWidth="98.00006103515625" text="Deal Income" />
+			</columns>
+		</TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="48.0" layoutX="12.0" layoutY="446.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="49.0" />
+	</children>
+</AnchorPane>

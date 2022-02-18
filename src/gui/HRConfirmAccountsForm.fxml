@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HRConfirmAccountsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="80.0" layoutY="22.0" stroke="#b5b5b5" strokeType="INSIDE" width="552.0" />
+      <ImageView fitHeight="73.0" fitWidth="82.0" layoutX="20.0" layoutY="14.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbl" layoutX="16.0" layoutY="106.0" onMouseClicked="#getSelectedUserRequest" prefHeight="152.0" prefWidth="674.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="50.91982460021973" text="ID" />
+          <TableColumn fx:id="firstNameCol" prefWidth="81.6998291015625" text="First Name" />
+          <TableColumn fx:id="lastNameCol" prefWidth="82.11964416503906" text="Last Name" />
+            <TableColumn fx:id="phoneCol" prefWidth="77.68011474609375" text="Phone" />
+            <TableColumn fx:id="emailCol" prefWidth="89.7208251953125" text="Email" />
+            <TableColumn fx:id="employeeNameCol" prefWidth="95.96755981445312" text="Employee name" />
+            <TableColumn fx:id="companyCodeCol" prefWidth="104.94802856445312" text="Company code" />
+            <TableColumn fx:id="auturizationCol" minWidth="0.0" prefWidth="87.0389404296875" text="Autorization" />
+        </columns>
+      </TableView>
+      <Text layoutX="120.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Business account confirmation" wrappingWidth="541.0">
+         <font>
+            <Font size="33.0" />
+         </font></Text>
+      <Label fx:id="lblMessage" layoutX="80.0" layoutY="349.0" prefHeight="17.0" prefWidth="525.0" />
+      <Label layoutX="181.0" layoutY="274.0" text="Change status*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpStatus" layoutX="315.0" layoutY="268.0" onAction="#getSelectedStatus" prefWidth="150.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="16.0" layoutY="319.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="59.0" layoutX="620.0" layoutY="307.0" onMouseClicked="#getConfirmBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_confirm.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="14.0" layoutY="311.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Label layoutX="183.0" layoutY="313.0" text="Billing amount*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBilling" layoutX="316.0" layoutY="308.0" prefHeight="29.0" prefWidth="150.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+   </children>
+</AnchorPane>

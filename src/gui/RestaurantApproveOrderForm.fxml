@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RestaurantApproveOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" layoutX="85.0" layoutY="24.0" stroke="#b5b5b5" strokeType="INSIDE" width="469.0" />
+      <ImageView fitHeight="73.0" fitWidth="82.0" layoutX="23.0" layoutY="18.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="195.0" layoutY="95.0" text="Select  ID_OrderNumber:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpIdOrderNumHold" layoutX="119.0" layoutY="162.0" onAction="#getSelectedHoldOrder" prefHeight="20.0" prefWidth="137.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <TableView fx:id="OrderToApprove" layoutX="19.0" layoutY="241.0" prefHeight="192.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="mealsColumn" prefWidth="189.9999942779541" text="Meals" />
+            <TableColumn fx:id="levelOfCookColumn" prefWidth="130.6667022705078" text="Level of cook" />
+            <TableColumn fx:id="retictionsColumn" prefWidth="183.33328247070312" text="Restrictions" />
+            <TableColumn fx:id="priceColumn" prefWidth="105.3333740234375" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="161.0" layoutY="28.0" text="Order Confirmation">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="451.0" prefHeight="20.0" prefWidth="126.0" text="Change Status*:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpStatus" layoutX="300.0" layoutY="447.0" onAction="#getSelectedStatus" prefWidth="150.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Label fx:id="lblMessage" layoutX="102.0" layoutY="496.0" prefHeight="17.0" prefWidth="435.0" />
+      <Label layoutX="202.0" layoutY="208.0" prefHeight="20.0" prefWidth="114.0" text="Current Status:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCurrentStatus" layoutX="322.0" layoutY="211.0" prefHeight="17.0" prefWidth="137.0" />
+      <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="19.0" layoutY="471.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="62.0" layoutX="560.0" layoutY="453.0" onMouseClicked="#getChangeBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_update.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="16.0" layoutY="461.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="73.0" layoutX="560.0" layoutY="448.0" onMouseClicked="#getChangeBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="62.0" />
+      <Label layoutX="154.0" layoutY="132.0" prefHeight="20.0" prefWidth="91.0" text="On Hold">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="132.0" prefHeight="20.0" prefWidth="91.0" text="Preparing">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpIdOrderNumApproved" layoutX="347.0" layoutY="161.0" onAction="#getSelectedApproveOrder" prefHeight="20.0" prefWidth="137.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="cmpSize" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#getSelectedSize" prefHeight="619.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CustomerMenuFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="65.0" layoutX="95.0" layoutY="24.0" stroke="#b5b5b5" strokeType="INSIDE" width="410.0" />
+      <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="27.0" layoutY="15.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="title" layoutX="143.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Name* Menu" wrappingWidth="339.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="116.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmpCategory" layoutX="278.0" layoutY="140.0" onAction="#getSelectedCategory" prefHeight="29.0" prefWidth="224.0" promptText="Choose" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Text layoutX="22.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose meal *: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblMessage" layoutX="149.0" layoutY="178.0" prefHeight="23.0" prefWidth="410.0" />
+      <ListView fx:id="MealList" layoutX="68.0" layoutY="210.0" onMouseClicked="#getSelectedMeal" prefHeight="157.0" prefWidth="457.0" style="-fx-cursor: hand; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="73.0" layoutY="409.0" text="Size:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpSize1" layoutX="128.0" layoutY="407.0" onAction="#getSelectedSize" prefHeight="29.0" prefWidth="117.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Label layoutX="268.0" layoutY="409.0" text="Level of cook:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmpLvlOfCook" layoutX="384.0" layoutY="407.0" onAction="#getSelectedLvlOfCook" prefHeight="29.0" prefWidth="143.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Text layoutX="75.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restrictions:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="72.0" layoutY="495.0" text="Meal Price:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="495.0" text="Total order price:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgAdd" fitHeight="50.0" fitWidth="49.0" layoutX="272.0" layoutY="538.0" onMouseClicked="#clickedAddOrderMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_add.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="263.0" layoutY="591.0" prefHeight="23.0" prefWidth="90.0" text="Add meal ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Text layoutX="23.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Optional:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="txtPrice" layoutX="175.0" layoutY="497.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label fx:id="txtTotalPrice" layoutX="414.0" layoutY="496.0" prefHeight="17.0" prefWidth="83.0" />
+      <TextField fx:id="txtRestricions" layoutX="180.0" layoutY="450.0" prefHeight="29.0" prefWidth="348.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111;" />
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="15.0" layoutY="552.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="527.0" layoutY="552.0" onMouseClicked="#getNextBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_next.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="56.0" layoutX="523.0" layoutY="39.0" onMouseClicked="#getViewOrderBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_viewOrderList.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="510.0" layoutY="12.0" prefHeight="23.0" prefWidth="90.0" text="View order ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="12.0" layoutY="544.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="525.0" layoutY="544.0" onMouseClicked="#getNextBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="524.0" layoutY="37.0" onMouseClicked="#getViewOrderBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Line endX="271.0" layoutX="216.0" layoutY="116.0" startX="-105.0" />
+      <Circle fill="WHITE" layoutX="228.0" layoutY="116.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="487.0" layoutY="116.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="357.0" layoutY="116.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="111.0" layoutY="116.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

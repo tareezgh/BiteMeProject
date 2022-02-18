@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CustomerDeliveryFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="389.0" layoutX="24.0" layoutY="171.0" stroke="#b5b5b5" strokeType="INSIDE" width="539.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="55.0" layoutX="94.0" layoutY="30.0" stroke="#b5b5b5" strokeType="INSIDE" width="431.0" />
+      <ImageView fitHeight="69.0" fitWidth="82.0" layoutX="29.0" layoutY="23.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="196.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Delivery details">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery type*:">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <ComboBox fx:id="cmpDeliveryType" layoutX="156.0" layoutY="245.0" onAction="#getSelectedDileveryType" prefHeight="29.0" prefWidth="162.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Text layoutX="189.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter you details" wrappingWidth="213.08203125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label layoutX="50.0" layoutY="358.0" text="Time*:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtTimeHour" alignment="CENTER" layoutX="103.0" layoutY="353.0" prefHeight="29.0" prefWidth="66.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <TextField fx:id="txtTimeMinute" alignment="CENTER" layoutX="205.0" layoutY="353.0" prefHeight="29.0" prefWidth="66.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="310.0" layoutY="358.0" text="Date:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <DatePicker fx:id="txtDate" layoutX="361.0" layoutY="353.0" prefHeight="29.0" prefWidth="174.0" style="-fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Label fx:id="lblName" layoutX="50.0" layoutY="407.0" text="Name:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtName" layoutX="106.0" layoutY="404.0" prefHeight="27.0" prefWidth="174.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label fx:id="lblPhone" layoutX="310.0" layoutY="409.0" text="Phone:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtPhone" layoutX="363.0" layoutY="404.0" prefHeight="27.0" prefWidth="174.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label fx:id="lblAddress" layoutX="47.0" layoutY="451.0" text="Address:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtAddress" layoutX="111.0" layoutY="447.0" prefHeight="27.0" prefWidth="431.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="51.0" layoutY="198.0" text="Payment method*:">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="lblMessage" layoutX="88.0" layoutY="579.0" prefHeight="17.0" prefWidth="422.0" />
+      <ComboBox fx:id="cmpType" layoutX="254.0" layoutY="137.0" onAction="#getSelectedType" prefWidth="150.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" />
+      <Text layoutX="187.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type*:" wrappingWidth="50.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblEmployeeName" layoutX="51.0" layoutY="507.0" text="Employee Name:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmployeeCode" layoutX="326.0" layoutY="507.0" text="Employee Code:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="12.0" layoutY="569.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="538.0" layoutY="569.0" onMouseClicked="#getNextBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_next.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="10.0" layoutY="565.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="55.0" layoutX="536.0" layoutY="564.0" onMouseClicked="#getNextBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Line endX="271.0" layoutX="223.0" layoutY="107.0" startX="-105.0" />
+      <Circle fill="#2f2929" layoutX="118.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="235.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="494.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="364.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="185.0" layoutY="352.0" text=":">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtParticpated" alignment="CENTER" layoutX="424.0" layoutY="245.0" prefHeight="29.0" prefWidth="76.0" style="-fx-background-radius: 2em; -fx-border-radius: 2em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Text layoutX="331.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Participated:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="txtEmployeeName" layoutX="174.0" layoutY="506.0" prefHeight="17.0" prefWidth="117.0" />
+      <Label fx:id="txtEmployeeCode" layoutX="442.0" layoutY="504.0" prefHeight="17.0" prefWidth="91.0" />
+      <Label fx:id="lblPayment" layoutX="194.0" layoutY="196.0" prefHeight="17.0" prefWidth="301.0" />
+   </children>
+</AnchorPane>

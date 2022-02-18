@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RestaurantUpdateMenuFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="47.0" layoutY="16.0" stroke="#b5b5b5" strokeType="INSIDE" width="450.0" />
+      <Text layoutX="124.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Category*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmpCategory" layoutX="284.0" layoutY="93.0" onAction="#getSelectedCategory" prefHeight="27.0" prefWidth="149.0" promptText="Choose" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></ComboBox>
+      <Label layoutX="170.0" layoutY="21.0" prefHeight="53.0" prefWidth="245.0" text="Update menu">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="77.0" layoutX="23.0" layoutY="12.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="MealList" layoutX="75.0" layoutY="139.0" onMouseClicked="#getSelectedMeal" prefHeight="135.0" prefWidth="401.0" style="-fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="75.0" layoutY="297.0" prefHeight="27.0" prefWidth="149.0" text="Price of big meal:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceBig" layoutX="250.0" layoutY="297.0" prefHeight="29.0" prefWidth="166.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="76.0" layoutY="342.0" text="Price of medium meal:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceMedium" layoutX="250.0" layoutY="340.0" prefHeight="29.0" prefWidth="166.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="75.0" layoutY="387.0" text="Price of small meal:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPriceSmall" layoutX="249.0" layoutY="385.0" prefHeight="29.0" prefWidth="166.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label fx:id="lblMessage" layoutX="84.0" layoutY="510.0" prefHeight="17.0" prefWidth="333.0" />
+      <ImageView fx:id="imgDelete" fitHeight="53.0" fitWidth="52.0" layoutX="292.0" layoutY="438.0" onMouseClicked="#getDeleteBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAdd" fitHeight="53.0" fitWidth="52.0" layoutX="158.0" layoutY="438.0" onMouseClicked="#getAddBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_add.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBack" fitHeight="53.0" fitWidth="52.0" layoutX="14.0" layoutY="484.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgUpdate" fitHeight="73.0" fitWidth="69.0" layoutX="433.0" layoutY="465.0" onMouseClicked="#getUpdateBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_update.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="13.0" layoutY="479.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="291.0" layoutY="434.0" onMouseClicked="#getDeleteBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="83.0" layoutX="426.0" layoutY="460.0" onMouseClicked="#getUpdateBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="77.0" />
+   </children>
+</AnchorPane>

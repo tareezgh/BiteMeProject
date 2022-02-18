@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RestaurantFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" layoutX="84.0" layoutY="38.0" stroke="#b5b5b5" strokeType="INSIDE" width="455.0" />
+      <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="24.0" layoutY="24.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="210.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to do ?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblWelcome" layoutX="16.0" layoutY="112.0" text="Welcome, UserName.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="approveOrdersImage" fitHeight="126.0" fitWidth="115.0" layoutX="120.0" layoutY="162.0" onMouseClicked="#getApproveOrdersBtnMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_approveOrders.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="createMenuImage" fitHeight="157.0" fitWidth="122.0" layoutX="404.0" layoutY="146.0" onMouseClicked="#getCreateMenuBtnMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_createMenu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="updateMenuImage" fitHeight="133.0" fitWidth="122.0" layoutX="257.0" layoutY="162.0" onMouseClicked="#getUpdateMenuBtnMouse" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_updateMenu.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="430.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account status: " wrappingWidth="99.2294921875" />
+      <Label fx:id="lblStatus" layoutX="520.0" layoutY="10.0" prefHeight="17.0" prefWidth="70.0" />
+      <Label fx:id="lblTitle" layoutX="175.0" layoutY="38.0" text="*Name* page">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="19.0" layoutY="291.0" onMouseClicked="#getLogoutBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_logout.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnApproveOrders" layoutX="106.0" layoutY="305.0" mnemonicParsing="false" onAction="#getApproveOrdersBtn" prefHeight="27.0" prefWidth="122.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" text="Approve orders" />
+      <Button fx:id="btnUpdateMenu" layoutX="249.0" layoutY="306.0" mnemonicParsing="false" onAction="#getUpdateMenuBtn" prefHeight="27.0" prefWidth="122.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" text="Update menu" />
+      <Button fx:id="btnCreateMenu" layoutX="404.0" layoutY="306.0" mnemonicParsing="false" onAction="#getCreateMenuBtn" prefHeight="27.0" prefWidth="122.0" style="-fx-background-radius: 5em; -fx-background-color: #fff; -fx-border-radius: 5em; -fx-border-color: #111; -fx-cursor: hand;" text="Create menu" />
+      <Rectangle fx:id="approveOrdersShape" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="143.0" layoutX="114.0" layoutY="149.0" onMouseClicked="#getApproveOrdersBtnMouse" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="115.0" />
+      <Rectangle fx:id="updateMenuShape" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="143.0" layoutX="257.0" layoutY="149.0" onMouseClicked="#getUpdateMenuBtnMouse" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="106.0" />
+      <Rectangle fx:id="createMenuShape" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="133.0" layoutX="411.0" layoutY="158.0" onMouseClicked="#getCreateMenuBtnMouse" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="106.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.IpFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="129.0" layoutX="72.0" layoutY="110.0" stroke="#b5b5b5" strokeType="INSIDE" width="341.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" layoutX="61.0" layoutY="17.0" stroke="#b5b5b5" strokeType="INSIDE" width="369.0" />
+      <Text layoutX="111.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to BiteMe" wrappingWidth="353.083984375">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="16.0" layoutY="14.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="189.0" text="IP Address*:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIP" layoutX="197.0" layoutY="187.0" prefHeight="27.0" prefWidth="194.0" style="-fx-background-radius: 3em; -fx-border-radius: 3em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Text layoutX="111.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please insert IP Address" textAlignment="CENTER" wrappingWidth="269.0966796875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblMessage" layoutX="105.0" layoutY="259.0" prefHeight="17.0" prefWidth="269.0" />
+      <ImageView fitHeight="54.0" fitWidth="72.0" layoutX="14.0" layoutY="249.0" onMouseClicked="#getExitBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="50.0" layoutX="398.0" layoutY="248.0" onMouseClicked="#getDoneBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_done.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="36.0" layoutX="14.0" layoutY="259.0" onMouseClicked="#getExitBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="72.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="396.0" layoutY="246.0" onMouseClicked="#getDoneBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+   </children>
+</AnchorPane>

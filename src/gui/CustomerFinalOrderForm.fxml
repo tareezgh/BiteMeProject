@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CustomerFinalOrderFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="55.0" layoutX="49.0" layoutY="20.0" stroke="#b5b5b5" strokeType="INSIDE" width="341.0" />
+      <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="12.0" layoutY="16.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="108.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order summary" wrappingWidth="264.4921875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TableView fx:id="SummaryTable" layoutX="41.0" layoutY="133.0" prefHeight="164.0" prefWidth="351.0">
+        <columns>
+          <TableColumn fx:id="mealColumn" prefWidth="168.5" text="Meal" />
+          <TableColumn fx:id="quantityColumn" prefWidth="101.0" text="Quantity" />
+            <TableColumn fx:id="priceColumn" prefWidth="77.5" text="Price" />
+        </columns>
+      </TableView>
+      <Text layoutX="43.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal:" wrappingWidth="73.64704474992413">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblSubtotal" layoutX="122.0" layoutY="312.0" prefHeight="17.0" prefWidth="129.0" text="XX.XX" />
+      <Text layoutX="42.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shipping:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblShipping" layoutX="123.0" layoutY="346.0" prefHeight="17.0" prefWidth="122.0" text="XX.XX" />
+      <Text layoutX="41.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblDiscount" layoutX="122.0" layoutY="381.0" prefHeight="17.0" prefWidth="129.0" text="-XX.XX" />
+      <Text layoutX="40.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblTotalPrice" layoutX="148.0" layoutY="466.0" prefHeight="19.0" prefWidth="129.0" text="XX.XX">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="18.0" layoutY="500.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="329.0" layoutY="477.0" onMouseClicked="#getPayBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_pay.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="74.0" layoutX="320.0" layoutY="477.0" onMouseClicked="#getPayBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="74.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="55.0" layoutX="19.0" layoutY="496.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="49.0" />
+      <Line endX="206.5" layoutX="169.0" layoutY="107.0" startX="-105.0" />
+      <Circle fill="#2f2929" layoutX="63.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="377.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="158.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#2f2929" layoutX="266.0" layoutY="107.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="lblMessage" layoutX="41.0" layoutY="416.0" prefHeight="20.0" prefWidth="129.0" text="Refund amount:">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="lblRefundAmount" layoutX="172.0" layoutY="418.0" prefHeight="17.0" prefWidth="63.0" text="XX.XX" />
+      <Button fx:id="BtnUse" layoutX="237.0" layoutY="412.0" mnemonicParsing="false" onAction="#getUseBtn" prefHeight="29.0" prefWidth="82.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111; -fx-cursor: hand;" text="Use Refund">
+         <font>
+            <Font size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HRRegisterEmployeeFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="63.0" layoutX="85.0" layoutY="25.0" stroke="#b5b5b5" strokeType="INSIDE" width="430.0" />
+      <ImageView fitHeight="78.0" fitWidth="82.0" layoutX="24.0" layoutY="16.0">
+         <image>
+            <Image url="@img_LogoBiteme.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="123.0" layoutY="30.0" text="Employer registration">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+      <Label layoutX="120.0" layoutY="182.0" text="Employer Name*:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtCode" layoutX="267.0" layoutY="122.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label layoutX="122.0" layoutY="125.0" text="Employer Code*:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtName" layoutX="267.0" layoutY="179.0" style="-fx-background-radius: 5em; -fx-border-radius: 5em; -fx-background-color: #fff; -fx-border-color: #111;" />
+      <Label fx:id="lblMessage" layoutX="93.0" layoutY="237.0" prefHeight="17.0" prefWidth="368.0" />
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="24.0" layoutY="222.0" onMouseClicked="#getBackBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="72.0" layoutX="469.0" layoutY="208.0" onMouseClicked="#getSignUpBtn" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@img_signup.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="50.0" layoutX="22.0" layoutY="220.0" onMouseClicked="#getBackBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="63.0" layoutX="470.0" layoutY="206.0" onMouseClicked="#getSignUpBtn" stroke="#ffffff00" strokeType="INSIDE" style="-fx-cursor: hand;" width="72.0" />
+   </children>
+</AnchorPane>
