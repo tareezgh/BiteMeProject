@@ -1,7 +1,6 @@
 package logic;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * represents a Order and Delivery in the system
@@ -13,17 +12,17 @@ public class OrderAndDelivery implements Serializable {
 	/** Customer id specific for customer */
 	private String customerID;
 	/** Specific order number */
-	private String OrderNumber;
+	private String orderNumber;
 	/** Status of the order */
 	private String status;
 	/** Restaurant name of this order */
-	private String RestaurantName;
+	private String restaurantName;
 	/** Date of the order  */
-	private String DateOfOrder;
+	private String dateOfOrder;
 	/** Delivery type for the order */
-	private String TypeOfDelivery;
+	private String typeOfDelivery;
 	/** The time of the order */
-	private String Time;
+	private String time;
 
 	/**
 	 * @param orderNumber     order number
@@ -37,12 +36,12 @@ public class OrderAndDelivery implements Serializable {
 			String dateOfOrder, String typeOfDelivery, String time) {
 		super();
 		
-		OrderNumber = orderNumber;
+		this.orderNumber = orderNumber;
 		this.status = status;
-		RestaurantName = restaurantName;
-		DateOfOrder = dateOfOrder;
-		TypeOfDelivery = typeOfDelivery;
-		Time = time;
+		this.restaurantName = restaurantName;
+		this.dateOfOrder = dateOfOrder;
+		this.typeOfDelivery = typeOfDelivery;
+		this.time = time;
 	}
 
 	public String getCustomerID() {
@@ -54,11 +53,11 @@ public class OrderAndDelivery implements Serializable {
 	}
 
 	public String getOrderNumber() {
-		return OrderNumber;
+		return orderNumber;
 	}
 
 	public void setOrderNumber(String orderNumber) {
-		OrderNumber = orderNumber;
+		this.orderNumber = orderNumber;
 	}
 
 	public String getStatus() {
@@ -70,42 +69,42 @@ public class OrderAndDelivery implements Serializable {
 	}
 
 	public String getRestaurantName() {
-		return RestaurantName;
+		return restaurantName;
 	}
 
 	public void setRestaurantName(String restaurantName) {
-		RestaurantName = restaurantName;
+		this.restaurantName = restaurantName;
 	}
 
 	public String getDateOfOrder() {
-		return DateOfOrder;
+		return dateOfOrder;
 	}
 
 	public void setDateOfOrder(String dateOfOrder) {
-		DateOfOrder = dateOfOrder;
+		this.dateOfOrder = dateOfOrder;
 	}
 
 	public String getTypeOfDelivery() {
-		return TypeOfDelivery;
+		return typeOfDelivery;
 	}
 
 	public void setTypeOfDelivery(String typeOfDelivery) {
-		TypeOfDelivery = typeOfDelivery;
+		this.typeOfDelivery = typeOfDelivery;
 	}
 
 	public String getTime() {
-		return Time;
+		return time;
 	}
 
 	public void setTime(String time) {
-		Time = time;
+		this.time = time;
 	}
 
 	@Override
 	public String toString() {
-		return "OrderAndDelivery [customerID=" + customerID + ", OrderNumber=" + OrderNumber + ", status=" + status
-				+ ", RestaurantName=" + RestaurantName + ", DateOfOrder=" + DateOfOrder + ", TypeOfDelivery="
-				+ TypeOfDelivery + ", Time=" + Time + "]";
+		return "OrderAndDelivery [customerID=" + customerID + ", OrderNumber=" + orderNumber + ", status=" + status
+				+ ", RestaurantName=" + restaurantName + ", DateOfOrder=" + dateOfOrder + ", TypeOfDelivery="
+				+ typeOfDelivery + ", Time=" + time + "]";
 	}
 
 }

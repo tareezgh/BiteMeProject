@@ -11,11 +11,11 @@ public class FileData implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** PDF File name */
-	private String FileName;
+	private String fileName;
 	/** File size - type integer */
 	private int size;
 	/** File type Blob to insert to DB */
-	private Blob FileInByte;
+	private Blob fileInByte;
 	/** Array bytes casting before insert to DB */
 	private byte[] byteArray;
 
@@ -26,9 +26,9 @@ public class FileData implements Serializable {
 	 */
 	public FileData(String fileName, int size, Blob fileInByte) {
 		super();
-		this.FileName = fileName;
+		this.fileName = fileName;
 		this.size = size;
-		this.FileInByte = fileInByte;
+		this.fileInByte = fileInByte;
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public class FileData implements Serializable {
 	 */
 	public FileData(String fileName, int size, byte[] byteArray) {
 		super();
-		this.FileName = fileName;
+		this.fileName = fileName;
 		this.size = size;
 		this.byteArray = byteArray;
 	}
@@ -52,11 +52,11 @@ public class FileData implements Serializable {
 	}
 
 	public String getFileName() {
-		return FileName;
+		return fileName;
 	}
 
 	public void setFileName(String fileName) {
-		FileName = fileName;
+		this.fileName = fileName;
 	}
 
 	public int getSize() {
@@ -68,11 +68,11 @@ public class FileData implements Serializable {
 	}
 
 	public Blob getFileInByte() {
-		return FileInByte;
+		return fileInByte;
 	}
 
 	public void setFileInByte(Blob fileInByte) {
-		FileInByte = fileInByte;
+		this.fileInByte = fileInByte;
 	}
 
 	public static long getSerialversionuid() {
@@ -81,7 +81,7 @@ public class FileData implements Serializable {
 
 	@Override
 	public String toString() {
-		return "File [FileID=" + FileName + ", FileSize=" + size + "]";
+		return "File [FileID=" + fileName + ", FileSize=" + size + "]";
 	}
 
 }

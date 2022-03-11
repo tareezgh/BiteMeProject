@@ -1,7 +1,6 @@
 package logic;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 /**
  * represents a Log in the system
@@ -11,9 +10,9 @@ public class Log implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** Log id is specific for each log */
-	private String LogID;
+	private String logID;
 	/** Log type - Income, order or performance */
-	private String LogType;
+	private String logType;
 	/** number of order we have */
 	private String numberOfOrders;
 	/** mount number of the log */
@@ -21,9 +20,9 @@ public class Log implements Serializable {
 	/** incomes for the restaurant in specific month */
 	private String incomes;
 	/** Logs for specific restaurant branch */
-	private String RestaurantBranch;
+	private String restaurantBranch;
 	/** Logs for specific restaurant */
-	private String RestaurantName;
+	private String restaurantName;
 
 	/**
 	 * @param LogID            log id for each log
@@ -37,29 +36,29 @@ public class Log implements Serializable {
 	public Log(String LogID, String LogType, String numberOfOrders, String monthNum, String incomes,
 			String RestaurantBranch, String RestaurantName) {
 		super();
-		this.LogID = LogID;
-		this.LogType = LogType;
+		this.logID = LogID;
+		this.logType = LogType;
 		this.numberOfOrders = numberOfOrders;
 		this.monthNum = monthNum;
 		this.incomes = incomes;
-		this.RestaurantBranch = RestaurantBranch;
-		this.RestaurantName = RestaurantName;
+		this.restaurantBranch = RestaurantBranch;
+		this.restaurantName = RestaurantName;
 	}
 
 	public String getLogID() {
-		return LogID;
+		return logID;
 	}
 
 	public void setLogID(String logID) {
-		LogID = logID;
+		this.logID = logID;
 	}
 
 	public String getLogType() {
-		return LogType;
+		return logType;
 	}
 
 	public void setLogType(String logType) {
-		LogType = logType;
+		this.logType = logType;
 	}
 
 	public String getNumberOfOrders() {
@@ -87,19 +86,19 @@ public class Log implements Serializable {
 	}
 
 	public String getRestaurantBranch() {
-		return RestaurantBranch;
+		return restaurantBranch;
 	}
 
 	public void setRestaurantBranch(String restaurantBranch) {
-		RestaurantBranch = restaurantBranch;
+		this.restaurantBranch = restaurantBranch;
 	}
 
 	public String getRestaurantName() {
-		return RestaurantName;
+		return restaurantName;
 	}
 
 	public void setRestaurantName(String restaurantName) {
-		RestaurantName = restaurantName;
+		this.restaurantName = restaurantName;
 	}
 
 	public static long getSerialversionuid() {
@@ -108,9 +107,9 @@ public class Log implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Log [LogID=" + LogID + ", LogType=" + LogType + ", numberOfOrders=" + numberOfOrders + ", monthNum="
-				+ monthNum + ", incomes=" + incomes + ", RestaurantBranch=" + RestaurantBranch + ", RestaurantName="
-				+ RestaurantName + "]";
+		return "Log [LogID=" + logID + ", LogType=" + logType + ", numberOfOrders=" + numberOfOrders + ", monthNum="
+				+ monthNum + ", incomes=" + incomes + ", RestaurantBranch=" + restaurantBranch + ", RestaurantName="
+				+ restaurantName + "]";
 	}
 
 }

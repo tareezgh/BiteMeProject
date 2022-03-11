@@ -10,35 +10,35 @@ public class Delivery implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/** Delivery number for order */
-	private String DeliveryNum;
+	private String deliveryNum;
 	/** Customer id who is ordered */
-	private String CustomerID;
+	private String customerID;
 	/** Order number */
-	private String OrderNumber;
+	private String orderNumber;
 	/** Type of payment Business or Private */
-	private String TypeOfPayment;
+	private String typeOfPayment;
 	/** Type of payment Regular, Shared or Robot */
-	private String TypeOfDelivery;
+	private String typeOfDelivery;
 	/** The time when the customer wants the order */
-	private String Time;
+	private String time;
 	/** The date when the customer wants the order */
-	private String Date;
+	private String date;
 	/** Customer name for delivery info */
-	private String CustomerName;
+	private String customerName;
 	/** Customer phone for delivery info */
-	private String PhoneNum;
+	private String phoneNum;
 	/** Customer address for delivery info */
-	private String Address;
+	private String address;
 	/** Employee name for business account */
-	private String EmployeeName;
+	private String employeeName;
 	/** Employee code for business account */
-	private String EmployeeCode;
+	private String employeeCode;
 	/** ShipmentTime of delivery */
-	private String ShipmentTime;
+	private String shipmentTime;
 	/** Order price */
-	private String Price;
+	private String price;
 	/** Base price for delivery type */
-	private String BasePrice;
+	private String basePrice;
 
 	private int orderNum = 0;
 
@@ -65,21 +65,21 @@ public class Delivery implements Serializable {
 			String typeOfDelivery, String time, String date, String customerName, String phoneNum, String address,
 			String employeeName, String employeeCode, String shipmentTime, String price, String basePrice) {
 		super();
-		DeliveryNum = deliveryNum;
-		CustomerID = customerID;
-		OrderNumber = orderNumber;
-		TypeOfPayment = typeOfPayment;
-		TypeOfDelivery = typeOfDelivery;
-		Time = time;
-		Date = date;
-		CustomerName = customerName;
-		PhoneNum = phoneNum;
-		Address = address;
-		EmployeeName = employeeName;
-		EmployeeCode = employeeCode;
-		ShipmentTime = shipmentTime;
-		Price = price;
-		BasePrice = basePrice;
+		this.deliveryNum = deliveryNum;
+		this.customerID = customerID;
+		this.orderNumber = orderNumber;
+		this.typeOfPayment = typeOfPayment;
+		this.typeOfDelivery = typeOfDelivery;
+		this.time = time;
+		this.date = date;
+		this.customerName = customerName;
+		this.phoneNum = phoneNum;
+		this.address = address;
+		this.employeeName = employeeName;
+		this.employeeCode = employeeCode;
+		this.shipmentTime = shipmentTime;
+		this.price = price;
+		this.basePrice = basePrice;
 	}
 
 	/**
@@ -94,15 +94,15 @@ public class Delivery implements Serializable {
 	 * @param date           date of order
 	 */
 	public Delivery(String deliveryNum, String customerID, String orderNumber, String typeOfPayment,
-			String typeOfDelivery, String Time, String Date) {
+			String typeOfDelivery, String time, String date) {
 		super();
-		DeliveryNum = deliveryNum;
-		CustomerID = customerID;
-		OrderNumber = orderNumber;
-		TypeOfPayment = typeOfPayment;
-		TypeOfDelivery = typeOfDelivery;
-		this.Time = Time;
-		this.Date = Date;
+		this.deliveryNum = deliveryNum;
+		this.customerID = customerID;
+		this.orderNumber = orderNumber;
+		this.typeOfPayment = typeOfPayment;
+		this.typeOfDelivery = typeOfDelivery;
+		this.time = time;
+		this.date = date;
 	}
 
 	public String getOrderNum() {
@@ -114,132 +114,132 @@ public class Delivery implements Serializable {
 	}
 
 	public String getDeliveryNum() {
-		return DeliveryNum;
+		return deliveryNum;
 	}
 
 	public void setDeliveryNum(String deliveryNum) {
-		DeliveryNum = deliveryNum;
+		this.deliveryNum = deliveryNum;
 	}
 
 	public String getCustomerID() {
-		return CustomerID;
+		return customerID;
 	}
 
 	public void setCustomerID(String customerID) {
-		CustomerID = customerID;
+		this.customerID = customerID;
 	}
 
 	public String getOrderNumber() {
-		return OrderNumber;
+		return orderNumber;
 	}
 
 	public void setOrderNumber(String orderNumber) {
-		OrderNumber = orderNumber;
+		this.orderNumber = orderNumber;
 	}
 
 	public String getTypeOfPayment() {
-		return TypeOfPayment;
+		return typeOfPayment;
 	}
 
 	public void setTypeOfPayment(String typeOfPayment) {
-		TypeOfPayment = typeOfPayment;
+		this.typeOfPayment = typeOfPayment;
 	}
 
 	public String getTypeOfDelivery() {
-		return TypeOfDelivery;
+		return typeOfDelivery;
 	}
 
 	public void setTypeOfDelivery(String typeOfDelivery) {
-		TypeOfDelivery = typeOfDelivery;
+		this.typeOfDelivery = typeOfDelivery;
 	}
 
 	public String getTime() {
-		return Time;
+		return time;
 	}
 
 	public void setTime(String time) {
-		Time = time;
+		this.time = time;
 	}
 
 	public String getDate() {
-		return Date;
+		return date;
 	}
 
 	public void setDate(String date) {
-		Date = date;
+		this.date = date;
 	}
 
 	public String getCustomerName() {
-		return CustomerName;
+		return customerName;
 	}
 
 	public void setCustomerName(String customerName) {
-		CustomerName = customerName;
+		this.customerName = customerName;
 	}
 
 	public String getPhoneNum() {
-		return PhoneNum;
+		return phoneNum;
 	}
 
 	public void setPhoneNum(String phoneNum) {
-		PhoneNum = phoneNum;
+		this.phoneNum = phoneNum;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 
 	public String getEmployeeName() {
-		return EmployeeName;
+		return employeeName;
 	}
 
 	public void setEmployeeName(String employeeName) {
-		EmployeeName = employeeName;
+		this.employeeName = employeeName;
 	}
 
 	public String getEmployeeCode() {
-		return EmployeeCode;
+		return employeeCode;
 	}
 
 	public void setEmployeeCode(String employeeCode) {
-		EmployeeCode = employeeCode;
+		this.employeeCode = employeeCode;
 	}
 
 	public String getShipmentTime() {
-		return ShipmentTime;
+		return shipmentTime;
 	}
 
 	public void setShipmentTime(String shipmentTime) {
-		ShipmentTime = shipmentTime;
+		this.shipmentTime = shipmentTime;
 	}
 
 	public String getPrice() {
-		return Price;
+		return price;
 	}
 
 	public void setPrice(String price) {
-		Price = price;
+		this.price = price;
 	}
 
 	public String getBasePrice() {
-		return BasePrice;
+		return basePrice;
 	}
 
 	public void setBasePrice(String basePrice) {
-		BasePrice = basePrice;
+		this.basePrice = basePrice;
 	}
 
 	@Override
 	public String toString() {
-		return "Delivery [DeliveryNum=" + DeliveryNum + ", CustomerID=" + CustomerID + ", OrderNumber=" + OrderNumber
-				+ ", TypeOfPayment=" + TypeOfPayment + ", TypeOfDelivery=" + TypeOfDelivery + ", Time=" + Time
-				+ ", Date=" + Date + ", CustomerName=" + CustomerName + ", PhoneNum=" + PhoneNum + ", Address="
-				+ Address + ", EmployeeName=" + EmployeeName + ", EmployeeCode=" + EmployeeCode + ", ShipmentTime="
-				+ ShipmentTime + ", Price=" + Price + ", BasePrice=" + BasePrice + "]";
+		return "Delivery [DeliveryNum=" + deliveryNum + ", CustomerID=" + customerID + ", OrderNumber=" + orderNumber
+				+ ", TypeOfPayment=" + typeOfPayment + ", TypeOfDelivery=" + typeOfDelivery + ", Time=" + time
+				+ ", Date=" + date + ", CustomerName=" + customerName + ", PhoneNum=" + phoneNum + ", Address="
+				+ address + ", EmployeeName=" + employeeName + ", EmployeeCode=" + employeeCode + ", ShipmentTime="
+				+ shipmentTime + ", Price=" + price + ", BasePrice=" + basePrice + "]";
 	}
 
 }
